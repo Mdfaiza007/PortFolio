@@ -40,22 +40,6 @@ const projects = [
     liveUrl: "#",
     githubUrl: "https://github.com/Mdfaiza007"
   },
-  {
-    title: "Currency Converter",
-    description:
-      "A real-time currency converter application using React hooks and API integration. Displays updated exchange rates with a simple and intuitive UI.",
-    techStack: ["React", "API", "Hooks"],
-    liveUrl: "#",
-    githubUrl: "https://github.com/Mdfaiza007"
-  },
-  {
-    title: "JWT Auth Task Manager",
-    description:
-      "A full-stack task manager with JWT authentication, protected routes, user login/signup, and CRUD functionality for tasks. Built to demonstrate backend, API, and database skills.",
-    techStack: ["React", "Node.js", "Express.js", "MongoDB", "JWT"],
-    liveUrl: "#",
-    githubUrl: "#"
-  }
 ];
 
 const Projects = () => {
