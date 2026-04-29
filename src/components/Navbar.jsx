@@ -77,16 +77,30 @@ const Navbar = () => {
             ))}
           </ul>
 
-          <a
-            href="#contact"
-            onClick={(e) => {
-              e.preventDefault();
-              handleNavClick("contact");
-            }}
-            className="hidden lg:inline-flex btn-primary text-xs"
-          >
-            Let&apos;s Connect
-          </a>
+          <div className="flex items-center gap-2">
+            <a
+              href="/Md_Faizan_Resume.pdf"
+              download
+              className="hidden lg:inline-flex items-center gap-1.5 btn-outline text-xs"
+            >
+              <svg viewBox="0 0 24 24" className="h-3.5 w-3.5" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                <polyline points="7 10 12 15 17 10" />
+                <line x1="12" y1="15" x2="12" y2="3" />
+              </svg>
+              Resume
+            </a>
+            <a
+              href="#contact"
+              onClick={(e) => {
+                e.preventDefault();
+                handleNavClick("contact");
+              }}
+              className="hidden lg:inline-flex btn-primary text-xs"
+            >
+              Let&apos;s Connect
+            </a>
+          </div>
         </div>
 
         <button
@@ -137,6 +151,20 @@ const Navbar = () => {
               </li>
             ))}
             <li className="pt-1">
+              <a
+                href="/Md_Faizan_Resume.pdf"
+                download
+                className="flex w-full items-center justify-center gap-2 btn-outline text-sm mb-2"
+              >
+                <svg viewBox="0 0 24 24" className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                  <polyline points="7 10 12 15 17 10" />
+                  <line x1="12" y1="15" x2="12" y2="3" />
+                </svg>
+                Download Resume
+              </a>
+            </li>
+            <li>
               <button
                 onClick={() => handleNavClick("contact")}
                 className="w-full btn-primary text-sm"

@@ -32,7 +32,7 @@ const skillCategories = [
   {
     title: "Backend",
     description: "Designing APIs, auth flows, and scalable services.",
-    skills: ["Node.js", "Express.js"]
+    skills: ["Node.js", "Express.js", "Mongoose", "REST API"]
   },
   {
     title: "Database",
@@ -48,6 +48,11 @@ const skillCategories = [
     title: "Core CS",
     description: "Strong foundations for reasoning about performance.",
     skills: ["DSA", "OOPs", "OS", "DBMS"]
+  },
+  {
+    title: "Tools & Integrations",
+    description: "Third-party services, security, and developer tooling.",
+    skills: ["JWT", "Razorpay", "Cloudinary", "Multer", "Git"]
   }
 ];
 

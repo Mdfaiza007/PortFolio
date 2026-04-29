@@ -25,6 +25,18 @@ const useRevealOnScroll = () => {
 
 const projects = [
   {
+    title: "PropFlow — Real Estate Management System",
+    description:
+      "Developed a full-stack multi-role web application for real estate management supporting Owner, Manager, and Tenant workflows. Implemented JWT-based authentication with Role-Based Access Control (RBAC). Built property management with Cloudinary photo uploads, manager assignment, and Razorpay payment gateway for rent collection with invoice generation. Designed digital lease management with e-signature workflow and a maintenance request system allowing tenants to submit issues with photo evidence.",
+    techStack: [
+      "React.js", "Node.js", "Express.js", "MongoDB", "Mongoose",
+      "JWT", "Razorpay", "Cloudinary", "REST API", "Multer"
+    ],
+    liveUrl: "https://propflow-khaki.vercel.app",
+    githubUrl: "https://github.com/Mdfaiza007",
+    featured: true
+  },
+  {
     title: "Sorting and Searching Visualizer",
     description:
       "Built a fully automated algorithm visualization platform supporting multiple sorting and searching techniques. Designed smooth asynchronous animations using JavaScript Promises and dynamic DOM rendering. Added real-time step tracking, complexity display, performance graph, and FPS monitoring. Implemented mobile-optimized rendering and speed presets for adaptive performance.",
@@ -68,14 +80,25 @@ const Projects = () => {
           {projects.map((project) => (
             <article
               key={project.title}
-              className="card-glass group flex h-full flex-col justify-between overflow-hidden transition hover:-translate-y-1 hover:border-primary-500/60"
+              className={`card-glass group flex h-full flex-col justify-between overflow-hidden transition hover:-translate-y-1 ${
+                project.featured
+                  ? "lg:col-span-2 hover:border-primary-400/70 border-primary-500/30"
+                  : "hover:border-primary-500/60"
+              }`}
             >
               <div className="relative p-5 sm:p-6">
                 <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-primary-500/8 via-transparent to-slate-950/80 opacity-0 transition group-hover:opacity-100" />
                 <div className="relative z-10">
-                  <h3 className="text-lg font-semibold text-white">
-                    {project.title}
-                  </h3>
+                  <div className="flex flex-wrap items-center gap-3">
+                    <h3 className="text-lg font-semibold text-white">
+                      {project.title}
+                    </h3>
+                    {project.featured && (
+                      <span className="inline-flex items-center gap-1 rounded-full bg-primary-500/20 px-2.5 py-0.5 text-[10px] font-semibold uppercase tracking-widest text-primary-300 ring-1 ring-primary-500/40">
+                        ✦ Featured
+                      </span>
+                    )}
+                  </div>
                   <p className="mt-2 text-sm text-slate-300">
                     {project.description}
                   </p>
@@ -96,7 +119,7 @@ const Projects = () => {
                 <div className="flex flex-wrap items-center justify-between gap-3">
                   <div className="flex items-center gap-2 text-xs text-slate-400">
                     <span className="h-1.5 w-1.5 rounded-full bg-primary-400" />
-                    <span>Project showcase</span>
+                    <span>{project.featured ? "Full-Stack · Live" : "Project showcase"}</span>
                   </div>
 
                   <div className="flex flex-wrap items-center gap-2">
